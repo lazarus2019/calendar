@@ -1,6 +1,5 @@
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
-import VitePluginBrowserSync from "vite-plugin-browser-sync";
 import viteCompression from "vite-plugin-compression";
 import { createHtmlPlugin } from "vite-plugin-html";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
@@ -13,7 +12,6 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
     svgr(),
-    VitePluginBrowserSync(),
     viteCompression(),
     ViteImageOptimizer({
       test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,
