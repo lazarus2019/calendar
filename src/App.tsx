@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-import reactLogo from "./assets/react.svg";
+import ReactLogo from "@/assets/react.svg?react";
 
+// Can not import svg file as component in public directory
 import viteLogo from "/vite.svg";
 import "./App.css";
 
@@ -15,7 +16,7 @@ function App() {
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
+          <ReactLogo width={100} height={100} className="logo react" />
         </a>
       </div>
       <h1>Vite + React</h1>
