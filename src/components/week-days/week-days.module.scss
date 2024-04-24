@@ -1,0 +1,10 @@
+.week-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+}
+
+.week-day {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
