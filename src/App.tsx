@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 import ReactLogo from "@/assets/react.svg?react";
 
@@ -27,6 +28,8 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">Click on the Vite and React logos to learn more</p>
+      {/* Vercel analytics website traffic */}
+      <Analytics />
     </>
   );
 }
