@@ -2,21 +2,20 @@ import EventCalendar from "@/components/event-calendar";
 import MonthControl from "@/components/month-control";
 import { mockEvents } from "@/mock/event";
 
-import { Analytics } from "@vercel/analytics/react";
+// import { Analytics } from "@vercel/analytics/react";
 import dayjs from "dayjs";
-import "./App.css";
 import { useState } from "react";
+import "./App.css";
 
-const currentDate = dayjs(new Date());
+const currentDate = dayjs();
 function App() {
-  const [currentMonth, setCurrentMonth] = useState(currentDate.month() + 1);
-  console.log({ currentMonth });
+  const [currentMonth, setCurrentMonth] = useState(currentDate.startOf("month"));
   return (
     <>
       <MonthControl onChange={value => setCurrentMonth(value)} value={currentMonth} />
-      <EventCalendar events={mockEvents} />
+      <EventCalendar events={mockEvents} month={currentMonth} currentDate={currentDate} />
       {/* Vercel analytics website traffic */}
-      <Analytics />
+      {/* <Analytics /> */}
     </>
   );
 }

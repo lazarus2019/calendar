@@ -1,18 +1,23 @@
 import styles from "./month-control.module.scss";
 
+import { Dayjs } from "dayjs";
+
 interface MonthControlProps {
-  onChange: (month: number) => void;
-  value: number;
+  onChange: (month: Dayjs) => void;
+  value: Dayjs;
 }
 
 function MonthControl({ value, onChange }: MonthControlProps) {
-  const handleChange = (newValue: number) => {
-    onChange(newValue);
+  const handleSetPreviousMonth = () => {
+    onChange(value.subtract(1, "month"));
+  };
+  const handleSetNextMonth = () => {
+    onChange(value.add(1, "month"));
   };
   return (
     <div className={styles["month-control"]}>
-      <button onClick={() => handleChange(value - 1)}>&lt;</button>
-      <button onClick={() => handleChange(value + 1)}>&gt;</button>
+      <button onClick={handleSetPreviousMonth}>&lt;</button>
+      <button onClick={handleSetNextMonth}>&gt;</button>
     </div>
   );
 }
