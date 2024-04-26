@@ -12,12 +12,23 @@
   font-size: 1.2rem;
   user-select: none;
 
+  .date-item-am {
+    color: #a8a8a8;
+    font-weight: 500;
+    font-size: 14px;
+    font-style: italic;
+  }
+
   &.enable {
     color: #000;
     cursor: pointer;
 
     &:hover {
       background-color: #a8a8a8;
+
+      .date-item-am {
+        color: #e7e7e7;
+      }
     }
   }
 

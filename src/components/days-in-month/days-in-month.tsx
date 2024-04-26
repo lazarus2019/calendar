@@ -25,6 +25,7 @@ function DaysInMonth({ listDays, events }: DaysInMonthProps) {
           })}
         >
           {day.date}
+          <p className={styles["date-item-am"]}>{day.value.subtract(39, "day").format("DD/MM")}</p>
           <div className={styles["events-date-wrapper"]}>
             <EventsDate events={events} dateValue={day.value} />
           </div>
