@@ -20,7 +20,7 @@ interface EventCalendarProps {
   month: Dayjs;
 }
 
-function EventCalendar({ currentDate, month }: EventCalendarProps) {
+function EventCalendar({ currentDate, month, events }: EventCalendarProps) {
   const listDays = getCalendarListDays(month, currentDate);
 
   return (
@@ -30,7 +30,7 @@ function EventCalendar({ currentDate, month }: EventCalendarProps) {
         <WeekDays />
       </div>
       <div className={styles["list-days-container"]}>
-        <DaysInMonth listDays={listDays} currentDate={currentDate} />
+        <DaysInMonth listDays={listDays} currentDate={currentDate} events={events} />
       </div>
     </div>
   );

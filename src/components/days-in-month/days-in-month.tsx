@@ -1,6 +1,7 @@
 import styles from "./days-in-month.module.scss";
 
-import { CalendarDate } from "@/types";
+import EventsDate from "@/components/events-date";
+import { CalendarDate, CalendarEvent } from "@/types";
 
 import clsx from "clsx";
 import { Dayjs } from "dayjs";
@@ -8,20 +9,25 @@ import { Dayjs } from "dayjs";
 interface DaysInMonthProps {
   listDays: CalendarDate[];
   currentDate: Dayjs;
+  events: CalendarEvent[];
 }
 
-function DaysInMonth({ listDays }: DaysInMonthProps) {
+function DaysInMonth({ listDays, events }: DaysInMonthProps) {
   return (
     <div className={styles["days-in-month"]}>
       {listDays.map(day => (
         <div
-          key={`${day.value}-${day.enable}`}
+          key={`${day.date}-${day.enable}`}
           className={clsx(styles["day-item"], {
             [styles["enable"]]: day.enable,
             [styles["selected"]]: day.selected,
+            // [styles["event"]]: day.date,
           })}
         >
-          {day.value}
+          {day.date}
+          <div className={styles["events-date-wrapper"]}>
+            <EventsDate events={events} dateValue={day.value} />
+          </div>
         </div>
       ))}
     </div>

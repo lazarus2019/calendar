@@ -18,4 +18,8 @@ export const mockEvents: CalendarEvent[] = [
     date: addManipulateDate(new Date(), 2),
     title: "Planning PCalendar project",
   },
+  {
+    date: addManipulateDate(new Date(), 10),
+    title: "Research video",
+  },
 ];

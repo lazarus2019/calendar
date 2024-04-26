@@ -6,6 +6,7 @@
 }
 
 .day-item {
+  position: relative;
   color: #a8a8a8;
   font-weight: 600;
   font-size: 1.2rem;
@@ -23,5 +24,11 @@
   &.selected {
     color: #fff;
     background-color: #0d83cc;
+  }
+
+  .events-date-wrapper {
+    position: absolute;
+    bottom: 6px;
+    width: 100%;
   }
 }

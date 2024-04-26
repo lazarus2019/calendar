@@ -1,0 +1,29 @@
+.events-date {
+  position: relative;
+
+  .events-tooltip-btn {
+    display: block;
+    height: 8px;
+    background-color: #0b8043;
+    border-radius: 9999px;
+  }
+
+  .events-tooltip-content {
+    position: absolute;
+    right: calc(100% + 12px);
+    bottom: calc(100% + 12px);
+    display: none;
+    width: 460px;
+    padding: 8px 20px;
+    color: #000;
+    text-align: left;
+    list-style-type: none;
+    background-color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  .events-tooltip-btn:hover ~ .events-tooltip-content {
+    display: block;
+  }
+}

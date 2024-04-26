@@ -6,7 +6,8 @@ export type CalendarEvent = {
 };
 
 export type CalendarDate = {
-  value: number;
+  date: number;
+  value: Dayjs;
   enable: boolean;
   selected?: boolean;
 };
