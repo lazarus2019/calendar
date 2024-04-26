@@ -1,5 +1,7 @@
+import { Dayjs } from "dayjs";
+
 export type CalendarEvent = {
-  date: Date;
+  date: Dayjs;
   title: string;
 };
 

@@ -1,13 +1,19 @@
-import dayjs, { Dayjs } from "dayjs";
+import dayjs, { Dayjs, ManipulateType } from "dayjs";
 
-export const addDays = (date: Date, increaseDay: number) => {
-  return dayjs(date).add(increaseDay, "day").toDate();
+export const addManipulateDate = (
+  date: Date,
+  increaseDay: number,
+  type: ManipulateType = "day"
+) => {
+  return dayjs(date).add(increaseDay, type);
 };
 
-export const subDays = (date: Date, decreaseDay: number) => {
-  return dayjs(date)
-    .add(decreaseDay * -1, "day")
-    .toDate();
+export const subManipulateDate = (
+  date: Date,
+  decreaseDay: number,
+  type: ManipulateType = "day"
+) => {
+  return dayjs(date).subtract(decreaseDay, type);
 };
 
 export const formatDate = (date: Date | Dayjs, format: string) => {
