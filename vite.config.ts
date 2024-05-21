@@ -1,11 +1,11 @@
-import react from "@vitejs/plugin-react";
-import { defineConfig } from "vite";
-import VitePluginBrowserSync from "vite-plugin-browser-sync";
-import viteCompression from "vite-plugin-compression";
-import { createHtmlPlugin } from "vite-plugin-html";
-import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
-import svgr from "vite-plugin-svgr";
-import tsconfigPaths from "vite-tsconfig-paths";
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import viteCompression from 'vite-plugin-compression'
+import { createHtmlPlugin } from 'vite-plugin-html'
+import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
+import { qrcode } from 'vite-plugin-qrcode'
+import svgr from 'vite-plugin-svgr'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -13,7 +13,7 @@ export default defineConfig({
     react(),
     tsconfigPaths(),
     svgr(),
-    VitePluginBrowserSync(),
+    qrcode(),
     viteCompression(),
     ViteImageOptimizer({
       test: /\.(jpe?g|png|gif|tiff|webp|svg|avif)$/i,
@@ -26,7 +26,7 @@ export default defineConfig({
         multipass: true,
         plugins: [
           {
-            name: "preset-default",
+            name: 'preset-default',
             params: {
               overrides: {
                 cleanupNumericValues: false,
@@ -39,11 +39,11 @@ export default defineConfig({
               },
             },
           },
-          "sortAttrs",
+          'sortAttrs',
           {
-            name: "addAttributesToSVGElement",
+            name: 'addAttributesToSVGElement',
             params: {
-              attributes: [{ xmlns: "http://www.w3.org/2000/svg" }],
+              attributes: [{ xmlns: 'http://www.w3.org/2000/svg' }],
             },
           },
         ],
@@ -82,19 +82,19 @@ export default defineConfig({
       minify: true,
       inject: {
         data: {
-          title: "index",
+          title: 'index',
           injectScript: `<script src="./inject.js"></script>`,
         },
         tags: [
           {
-            injectTo: "body-prepend",
-            tag: "div",
+            injectTo: 'body-prepend',
+            tag: 'div',
             attrs: {
-              id: "tag",
+              id: 'tag',
             },
           },
         ],
       },
     }),
   ],
-});
+})

@@ -1,5 +1,5 @@
 {
-  "src/**/*.+(ts|tsx)": ["eslint --fix", "prettier --write --ignore-unknown"],
-  "src/**/*.{css,md,scss}": ["prettier --write --ignore-unknown"],
-  "src/**/*.{css,scss}": ["stylelint --fix"]
+  "*.{html,md,json,jsonc}": ["bun prettier:fix"],
+  "*.{ts,tsx}": ["bun prettier:fix", "bun lint:fix"],
+  "*.css": ["bun lint:css"]
 }
