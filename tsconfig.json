@@ -29,7 +29,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "types": ["vite/client", "vitest/globals"]
+    "types": ["vite/client"]
   },
   "include": ["**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"],
