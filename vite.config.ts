@@ -1,17 +1,21 @@
 import react from '@vitejs/plugin-react'
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import viteCompression from 'vite-plugin-compression'
 import { createHtmlPlugin } from 'vite-plugin-html'
 import { ViteImageOptimizer } from 'vite-plugin-image-optimizer'
 import { qrcode } from 'vite-plugin-qrcode'
 import svgr from 'vite-plugin-svgr'
-import tsconfigPaths from 'vite-tsconfig-paths'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, './src'),
+    },
+  },
   plugins: [
     react(),
-    tsconfigPaths(),
     svgr(),
     qrcode(),
     viteCompression(),
@@ -97,4 +101,7 @@ export default defineConfig({
       },
     }),
   ],
+  server: {
+    port: 3000,
+  },
 })

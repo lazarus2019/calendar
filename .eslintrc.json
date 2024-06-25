@@ -53,7 +53,7 @@
     "import/no-extraneous-dependencies": "off",
     "import/no-import-module-exports": "error",
     "import/newline-after-import": "error",
-    "import/group-exports": "error",
+    "import/group-exports": "off",
     "import/exports-last": "off",
     "import/no-useless-path-segments": [
       "error",
@@ -62,7 +62,7 @@
       }
     ],
     "@typescript-eslint/no-explicit-any": "off",
-    "@typescript-eslint/no-non-null-assertion": "error",
+    "@typescript-eslint/no-non-null-assertion": "warn",
     "@typescript-eslint/no-unused-vars": "error",
     "@typescript-eslint/consistent-type-definitions": "off",
     "react-hooks/rules-of-hooks": "error",
