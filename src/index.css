@@ -3,9 +3,9 @@
   font-weight: 400;
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
+  font-synthesis: none;
   background-color: #242424;
   color-scheme: light dark;
-  font-synthesis: none;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

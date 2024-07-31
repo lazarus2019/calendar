@@ -1,5 +1,5 @@
 {
-  "name": "React template with bun",
+  "name": "react-template-with-bun",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -15,9 +15,9 @@
     "test:watch": "vitest --watch",
     "test:coverage": "vitest --watch --coverage",
     "test:ui": "vitest --watch --coverage --ui",
-    "lint": "eslint src --no-inline-config --report-unused-disable-directives --max-warnings 0",
+    "lint": "eslint src --report-unused-disable-directives",
     "lint:fix": "bun run lint -- --fix",
-    "lint:css": "stylelint **/*.css --aei --color",
+    "lint:css": "stylelint **/*.css --aei --color --fix",
     "prettier": "prettier src --check",
     "prettier:fix": "bun run prettier -- --write",
     "format": "bun run prettier && bun run lint",

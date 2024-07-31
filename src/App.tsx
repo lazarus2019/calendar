@@ -1,9 +1,9 @@
+// Can not import svg file as component in public directory
 import { useState } from 'react'
 
 import ReactLogo from '@/assets/react.svg?react'
 
 import './App.css'
-// Can not import svg file as component in public directory
 import viteLogo from '/vite.svg'
 
 function App() {
